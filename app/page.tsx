@@ -4,7 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import Dropdown from "./components/Dropdown";
 import ProductCard from "./components/productCard/ProductCard";
 import SearchBar from "./components/SearchBar";
-import { setSortPreference, setSearchTerm } from "./lib/redux/slicers/productSlice";
+import {
+  setSortPreference,
+  setSearchTerm,
+} from "./lib/redux/slicers/productSlice";
 import { RootState } from "./lib/redux/store";
 import { Product } from "./models/Product";
 
@@ -46,6 +49,8 @@ const ProductList = () => {
       </h1>
       <div className="relative">
         <SearchBar onSearchChange={handleSearchChange} />
+      </div >
+      <div className="relative">
         <Dropdown onSortChange={handleSortChange} />
       </div>
       <div className="flex flex-wrap content-start">

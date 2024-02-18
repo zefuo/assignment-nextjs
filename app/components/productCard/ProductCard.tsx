@@ -3,7 +3,10 @@ import { Product } from "../../models/Product";
 import DeleteDialog from "../dialog/DeleteDialog";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../lib/redux/store";
-import { removeProduct, voteProduct } from "../../lib/redux/slicers/productSlice";
+import {
+  removeProduct,
+  voteProduct,
+} from "../../lib/redux/slicers/productSlice";
 import toast, { Toaster } from "react-hot-toast";
 import DialogContent from "../dialog/DialogContent";
 import ProductCardContent from "./ProductCardContent";
@@ -48,7 +51,7 @@ export default function ProductCard({ product }: ProductProps) {
   };
 
   return (
-    <div className="mx-auto mt-11 w-80  rounded-lg bg-white dark:bg-emerald-800 shadow-md duration-300 ">
+    <div className="mx-auto mt-16 w-80 rounded-lg bg-white dark:bg-emerald-800 shadow-md duration-300 ">
       <ProductCardContent
         product={product}
         dialogOpener={dialogOpener}

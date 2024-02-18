@@ -56,7 +56,7 @@ const AddProductPage = () => {
   }
 
   return (
-    <div className="mx-48">
+    <div className="lg:mx-48">
       <h1 className="block text-gray-700 text-lg font-bold mt-4 mb-0 text-center">
         {" "}
         Add Product

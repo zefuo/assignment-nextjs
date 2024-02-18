@@ -6,7 +6,7 @@ interface SearchBarProps {
 
 const SearchBar = ({ onSearchChange }: SearchBarProps) => {
   return (
-    <div className=" -z-11 overflow-auto flex items-center justify-center">
+    <div className=" -z-11 overflow-hidden flex items-center justify-center">
       <div className="flex border-2 rounded">
         <input
           type="text"
