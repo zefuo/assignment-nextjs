@@ -13,7 +13,7 @@ Uygulamada kullanılan teknolojiler;
 
 ## Uygulamayı çalıştırmak için;
 
-
+Uygulamayı; https://assignment-nextjs-zeta.vercel.app/ adresinden inceleyebilirsiniz.
 
 ```bash
 npm run dev
