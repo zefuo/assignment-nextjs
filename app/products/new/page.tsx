@@ -1,6 +1,7 @@
 "use client";
 import { addProduct } from "@/app/lib/redux/slicers/productSlice";
 import { AppDispatch, RootState } from "@/app/lib/redux/store";
+import { Product } from "@/app/models/Product";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -38,7 +39,18 @@ const AddProductPage = () => {
   };
   const dispatch = useDispatch<AppDispatch>();
 
-  function handleSubmit(values, actions) {
+  function handleSubmit(
+    values: Product,
+    actions: FormikHelpers<{
+      title: string;
+      description: string;
+      price: number;
+      stock: number;
+      vote: number;
+      thumbnail: string;
+      id: number;
+    }>
+  ) {
     dispatch(addProduct(values));
     actions.resetForm();
   }
